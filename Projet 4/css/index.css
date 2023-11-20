@@ -1,0 +1,290 @@
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    background: #f1f1f1;
+}
+
+
+/* header  */
+
+header {
+    display: flex;
+    background-color: black;
+    color: white;
+    align-items: center;
+    height: 10vh;
+}
+
+header #logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+    padding-left: 1rem;
+}
+
+header #logo img {
+    color: rgb(255, 255, 255);
+    width: 5rem;
+}
+
+header #cquejve {
+    display: flex;
+    width: 40%;
+    justify-content: flex-end;
+}
+
+
+header nav ul li {
+    list-style: none;
+}
+
+/* Burger */
+
+.dispNone {
+    display: none;
+}
+
+#menu_open {
+    position: absolute;
+    top: 5rem;
+    right: 0.1rem;
+    background-color: #000000;
+    padding: 1rem;
+    z-index: 999;
+
+}
+
+#menu_open ul li {
+    list-style: none;
+    line-height: 2;
+}
+
+#menu_open ul li a {
+    text-decoration: none;
+    color: #b71313;
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+#menu_burger {
+    z-index: 1;
+    padding-right: 1rem;
+}
+
+/* Main */
+
+.container {
+    max-width: 700px;
+    height: 60%;
+    margin: 0 auto;
+    padding: 50px;
+    color: #f1f1f1;
+    text-align: center;
+}
+
+#bg {
+    background-color: #000000;
+    height: 50%;
+}
+
+/* Now Available  */
+
+.patterns2 {
+    height: 10vh;
+    background-color: #000000;
+    width: 100%;
+}
+
+#svg1 {
+    margin: 0 auto;
+    font-family: Lora;
+    letter-spacing: 5px;
+    stroke: #ffffff;
+    font-size: 63px;
+    font-weight: 700;
+    stroke-width: 3;
+    animation: textAnimate 3s infinite alternate;
+}
+
+
+@keyframes textAnimate {
+    0% {
+        stroke-dasharray: 0 50%;
+        stroke-dashoffset: 20%;
+        fill: hsl(180, 11%, 4%)
+    }
+
+    100% {
+        stroke-dasharray: 50% 0;
+        stroke-dashoffstet: -20%;
+        fill: hsla(189, 68%, 75%, 0%)
+    }
+
+}
+
+/* Fin Now Available  */
+
+.slider img {
+    max-width: 100%;
+    display: none;
+}
+
+
+img.active {
+    padding-top: 2rem;
+    display: block;
+    animation: fade 0.8s;
+    padding-bottom: 2rem;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.cont-btn {
+    margin: 0 auto;
+    width: 40%;
+    height: auto;
+    border: 1px solid rgb(252, 252, 252);
+    border-radius: 0.3rem;
+    box-shadow: 0 2px 10px rgb(243, 243, 243);
+    display: flex;
+    justify-content: center;
+    color: #f1f1f1;
+}
+
+.btn-nav {
+    font-size: 50px;
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+/* Boutton et animation  */
+main #boutton {
+    padding-top: 1rem;
+}
+
+
+main #boutton input {
+    padding: 0.1rem;
+    width: 40%;
+    border: none;
+    border-radius: 1.5rem;
+    font-size: 2.5rem;
+    background-color: #000000;
+    font-family: 'Cinzel', serif;
+    font-family: 'Orbitron', sans-serif;
+    color: #f1f1f1;
+    text-shadow: rgb(255, 255, 255) 2px 0 10px;
+    cursor: pointer;
+    animation-name: shake;
+    -webkit-animation-name: shake;
+    -moz-animation-name: shake;
+animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    }
+@keyframes shake {
+    0%  {transform: translate(1px, 1px) rotate(0deg);}
+    10% {transform: translate(-1px, -2px) rotate(-1deg);}
+    20% {transform: translate(-3px, 0px) rotate(1deg);}
+    30% {transform: translate(3px, 2px) rotate(0deg);}
+    40% {transform: translate(1px, -1px) rotate(1deg);}
+    50% {transform: translate(-1px, 2px) rotate(-1deg);}
+    60% {transform: translate(-3px, 1px) rotate(0deg);}
+    70% {transform: translate(3px, 1px) rotate(-1deg);}
+    80% {transform: translate(-1px, -1px) rotate(1deg);}
+    90% {transform: translate(1px, 2px) rotate(0deg);}
+    100% {transform: translate(1px, -2px) rotate(-1deg);}
+}
+
+/* Pattern HIT */
+.patterns {
+    height: 20vh;
+    background-color: #ffffff;
+}
+
+#svg2 text {
+    font-family: Lora;
+    letter-spacing: 10px;
+    stroke: #ffffff;
+    font-size: 100px;
+    font-weight: 700;
+    stroke-width: 3;
+
+    animation: textAnimate 5s infinite alternate;
+}
+
+@keyframes textAnimate {
+    0% {
+        stroke-dasharray: 0 50%;
+        stroke-dashoffset: 20%;
+        fill: hsl(180, 11%, 4%)
+    }
+
+    100% {
+        stroke-dasharray: 50% 0;
+        stroke-dashoffstet: -20%;
+        fill: hsla(189, 68%, 75%, 0%)
+    }
+
+}
+
+/* Fin du Pattern HIT  */
+
+/* Caroussel music */
+/* carousselmusic.js */
+
+
+/* Media Query  */
+
+@media(max-width: 391px) {
+    .cacher {
+        display: none;
+    }
+}
+
+@media (orientation : landscape) {
+    #menu_burger {
+        display: none;
+    }
+
+
+    #menu_open {
+        width: 12%;
+        display: flex;
+        justify-content: flex-end;
+        position: initial;
+    }
+
+    header nav {
+        width: 100%;
+        align-self: flex-end;
+    }
+
+
+    nav ul {
+        display: flex;
+        gap: 32px;
+    }
+
+}
